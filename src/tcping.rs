@@ -3,8 +3,6 @@ use std::{string, net::{TcpStream, SocketAddr}, time::{SystemTime, UNIX_EPOCH, D
 
 pub(crate) fn tcp_pings(addrs: &[String],send_byte:bool,timeout:u64,max_count:i32,handle:& dyn Fn(String,i32)->bool){
    
-
-    
     
     let (maxtx, maxrx) = mpsc::channel();
     
